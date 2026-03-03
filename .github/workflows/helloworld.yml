@@ -5,16 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "This is a Demo Build"
+        run: echo "This is a Demo Build."
  test:
     runs-on: ubuntu-latest
     steps:
       - name: Test Step
-        run: echo "This is a Demo Test"
+        run: echo "This is a Demo Test."
   deploy:
     runs-on: ubuntu-latest
     steps:
       -  name: Deploy Step
-         run: echo "This is a Demo Deploy"
+         run: echo "This is a Demo Deploy."
       
   
