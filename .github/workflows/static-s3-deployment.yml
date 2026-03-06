@@ -15,7 +15,6 @@ jobs:
       - name: Code Static Code for S3
         run: |
           aws s3 sync ./ s3://practice-cicd-demo/ \
-          --exclued "*" \
           --include "index.html" 
 
           
