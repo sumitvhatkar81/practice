@@ -1,22 +1,13 @@
-name: Hello World
+name: Practice Demo
 on: push
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Step
-        run: echo "Hello, ${{ vars.MY_NAME }}"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Test Step
-        run: echo "This is a Demo Test."
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      -  name: Deploy Step
-         run: echo "This is a Demo Deploy."
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Print index.html file
+        run: cat index.html
+
       
   
