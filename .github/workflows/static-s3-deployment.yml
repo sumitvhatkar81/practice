@@ -5,9 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code from repo
-        uses: action/checkout@v4
+        uses: action/checkout@v6
       - name: Configure AWS Credentials
-        uses: aws-action/configure-aws-credentials@v4
+        uses: aws-action/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
           aws-secrte-access-key: ${{ secrets.AWS_SECRTE_ACCESS_KEY}}
