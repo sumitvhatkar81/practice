@@ -1,0 +1,10 @@
+name: Context variable Dempo
+on: push
+jobs:
+  contect-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Context Variables
+        run: |
+          echo "this eorkflow is triggered by ${{ github.actor }}"
+          echo "The repository name is ${{ github.repository }}"
