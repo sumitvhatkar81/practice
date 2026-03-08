@@ -11,22 +11,22 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: perform quality checks
-              run: echo "Performing quality checks on the code"
-
+              run: |
+                echo "Performing quality checks on the code"
+                exit 1
     dev-deploy:
         if: github.ref_name == 'develop' && github.ref_name == 'push'        
         runs-on: ubuntu-latest
         steps:        
             - name: development deploy
-              run: echo "deploying the code to development environment"
-            
+              run: echo "deploying the code to development environment"    
     prod-deploy:
         if: github.ref_name == 'main' && github.ref_name == 'push'        
         runs-on: ubuntu-latest
         steps:        
             - name: production deploy
               run: echo "deploying the code to production environment"     
-        
+
     success_notification:
         needs: ['quality_checks', 'dev-deploy', 'prod-deploy']
         if: always() && !failure()       
