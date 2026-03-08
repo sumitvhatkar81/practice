@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Run this for Sumit or Vhatkar
         if: github.actor == 'Sumit' || github.actor == 'Vhatkar'
-        run: echo "it is trigger by either SUmit OR Vhatkar"
+        run: echo "it is triggered by either Sumit or Vhatkar"
         
      
