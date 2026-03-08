@@ -14,5 +14,5 @@ jobs:
           aws-region: us-east-1
       - name: Code Static Code for S3
         run: |
-          aws s3 sync ./ s3://practice-cicd-demo/ --exclude "*" --include "index.html"
+          aws s3 sync ./ s3://practice-bucket-for-github-demo/ --exclude "*" --include "index.html"
   
